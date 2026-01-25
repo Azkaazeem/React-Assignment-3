@@ -1,0 +1,140 @@
+/* Container Setup */
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Common Image Styles --- */
+.hero-elements, .leaf-pos {
+    position: absolute;
+    object-fit: contain;
+}
+
+/* --- Text Styling (Marée) --- */
+.main-logo-text {
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(60px, 12vw, 150px);
+    color: #000;
+    z-index: 10; /* Above couple, below some leaves */
+    margin: 0;
+    margin-bottom: 100px; /* Adjust to sit above couple properly */
+}
+
+/* --- Positioning The Assets --- */
+
+/* 1. Cloud & Bird (Background) */
+.cloud-img {
+    top: 5%;
+    left: 10%;
+    width: 20%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.bird-img {
+    top: 15%;
+    right: 15%;
+    width: 8%;
+    z-index: 1;
+}
+
+/* 2. Couple (Center Bottom) */
+.couple-img {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers horizontally */
+    height: 70vh; /* Takes up 70% of screen height */
+    width: auto;
+    z-index: 5;
+}
+
+/* 3. Leaves Positioning (Framing the scene) */
+
+/* Top Left Corner */
+.big-leaf {
+    top: -5%;
+    left: -5%;
+    width: 25%;
+    z-index: 20;
+    transform: rotate(180deg);
+}
+
+/* Top Right Corner */
+.round-leaf {
+    top: 0;
+    right: 0;
+    width: 20%;
+    z-index: 20;
+}
+
+/* Bottom Left */
+.shrink-leaf {
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    z-index: 20;
+}
+
+/* Bottom Right */
+.leaf-6 {
+    bottom: -10%;
+    right: -5%;
+    width: 25%;
+    z-index: 6; /* Behind couple slightly? Adjust z-index if needed */
+}
+
+/* Floating Small Details */
+.small-leaf {
+    top: 30%;
+    left: 20%;
+    width: 5%;
+    z-index: 15;
+}
+
+.couple-leaf {
+    bottom: 10%;
+    right: 20%;
+    width: 12%;
+    z-index: 15;
+}
+
+/* --- The Special Swaying Leaves (from previous request) --- */
+/* Positioning them near the Text */
+.leaf-ani-1 {
+    top: 40%;
+    left: 35%; /* Adjust to sit near text */
+    width: 50px;
+    z-index: 12;
+}
+
+.leaf-ani-2 {
+    top: 40%;
+    right: 35%; /* Adjust to sit near text */
+    width: 50px;
+    transform: scaleX(-1); /* Flip horizontally */
+    z-index: 12;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .couple-img {
+        height: 50vh;
+    }
+    .main-logo-text {
+        margin-bottom: 50px;
+    }
+    .cloud-img {
+        width: 40%;
+    }
+}
