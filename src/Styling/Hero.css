@@ -17,6 +17,8 @@
     font-style: normal;
     font-size: 40px !important;
     text-align: center;
+        /* opacity: 0;
+    transform: translateY(20px); thora neeche se aaye */
 }
 
 .small-animated-logo img {
