@@ -1,5 +1,46 @@
-.small-animated-logo h3 {
+.hero-container {
     font-family: "Bodoni Moda", serif;
     font-style: normal;
-    font-size: 90px !important;
+    margin: 0%;
+    padding: 0;
+}
+
+.small-animated-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hero-container h1 {
+    font-family: "Bodoni Moda", serif;
+    font-style: normal;
+    font-size: 40px !important;
+    text-align: center;
+}
+
+.small-animated-logo img {
+    width: 2em;
+    margin-left: 10px;
+    top: 48%;
+    left: 53%;
+}
+
+.heart-leaf1 {
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    right: 0%;
+    top: 10px;
+    left: 10px;
+}
+
+.heart-leaf2 {
+    transform: rotate(90deg);
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    right: 10px;
 }
